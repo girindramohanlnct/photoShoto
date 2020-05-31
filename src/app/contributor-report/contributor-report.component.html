@@ -1,0 +1,21 @@
+<div class="normal">
+    <div class="filter">
+        <h3>Download Report</h3>
+    </div>
+    <div class="space"></div>
+    <div class="inputs">
+        <table id="customers">
+            <tr>
+                <th>Image Name</th>
+                <th>Category</th>
+                <th>Total Downloads</th>
+            </tr>
+            <tr *ngFor="let images of images">
+                <td>{{ images.imageName }}</td>
+                <td>{{ images.category }}</td>
+                <td>{{ images.downloads }}</td>
+            </tr>
+        </table>
+    </div>
+
+</div>

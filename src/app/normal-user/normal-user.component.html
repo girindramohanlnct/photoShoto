@@ -1,0 +1,49 @@
+<div class="normal">
+  <div class="filter">
+    <h3>Category</h3>
+    <div class="filters">
+      <div>
+        <input type="radio" (click)="search('technology')" name="category" value="Techenology" />
+        <label>Techenology</label>
+      </div>
+      <div>
+        <input type="radio" (click)="search('marketing')" name="category" value="Marketing" />
+        <label>Marketing</label>
+      </div>
+      <div>
+        <input type="radio" (click)="search('b2b')" name="category" value="B2B" /> <label>B2B</label>
+      </div>
+    </div>
+  </div>
+  <div class="space"></div>
+  <div class="images">
+    <div *ngFor="let images of images" (click)="show(images)" class="card">
+      <img [src]="images.imageURL" [alt]="images.imageName">
+      <div class="container">
+        <p>
+          <b>Contributor: {{ images.userName }}</b>
+        </p>
+        <p>Category: {{ images.category }}</p>
+        <p>Downloads: {{ images.downloads }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="isClicked" class="hover_bkgr_fricc">
+  <span class="helper"></span>
+  <div>
+    <div (click)="show()" class="popupCloseButton">&times;</div>
+    <div class="bgimage">
+      <img [src]="img.imageURL" />
+    </div>
+    <div>
+      <p>
+        Contributor: {{ img.userName }}<br />
+        Type: {{ img.category }} <br />
+        Downloads: {{ img.downloads }}
+      </p>
+      <button type="button" (click)="downloads(img.id)">Download</button>
+    </div>
+  </div>
+</div>

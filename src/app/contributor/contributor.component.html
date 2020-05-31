@@ -1,0 +1,32 @@
+<div class="normal">
+  <div class="filter">
+    <h3 (click)="showReport()">Download Report</h3>
+  </div>
+  <div class="space"></div>
+  <div *ngIf="isForm" class="inputs">
+    <h3 class="heads">UploadImage</h3>
+    <div class="forms">
+      <form [formGroup]="form" (submit)="saveImage()">
+        <div>
+          <label for="Image Name">Image Name: </label>
+          <input formControlName="imageName" type="text" name="Image" />
+        </div>
+        <div>
+          <label>Choose File: </label>
+          <input formControlName="image" type="file" (change)="onImagePicked($event)" />
+        </div>
+        <div>
+          <label>Category: </label>
+          <select formControlName="category" name="" id="">
+            <option name="technology" value="technology">Technology</option>
+            <option name="marketing" value="marketing">Marketing</option>
+            <option name="b2b" value="b2b">B2B</option>
+          </select>
+        </div>
+        <div>
+          <button type="submit">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

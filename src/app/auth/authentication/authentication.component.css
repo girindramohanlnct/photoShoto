@@ -1,0 +1,83 @@
+.auth {
+  display: flex;
+  flex-direction: row;
+}
+
+.login {
+  width: 50vw;
+  height: 100vh;
+}
+
+.sign {
+  width: 50vw;
+  height: 100vh;
+}
+
+.sign-box {
+  margin-top: 50%;
+  margin-left: 50%;
+  width: 25vw;
+  height: 40vh;
+  transform: translate(-50%, -50%);
+  /* border: 3px solid orange; */
+}
+
+.sign-box form {
+  position: relative;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.input {
+  position: relative;
+  width: 80%;
+  height: 30px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.sign-box input:hover {
+  box-shadow: 1px 1px 6px yellow;
+}
+
+.sign-box button {
+  position: relative;
+  width: 40%;
+  height: 40px;
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: #a87e0a;
+}
+
+.sign-box button:hover {
+  background-color: chocolate;
+}
+
+::placeholder {
+  color: teal;
+  letter-spacing: 2px;
+}
+
+h3 {
+  margin-bottom: 10px;
+  color: #960892;
+  font-weight: bold;
+  font-size: large;
+}
+
+.vl {
+  border-left: 6px solid green;
+  height: 100vh;
+}
+.user {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.user input {
+  margin-right: 10px;
+}
+
+.user label {
+  font-weight: bold;
+}

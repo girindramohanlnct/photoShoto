@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  /* background: linear-gradient(to right, rgb(85, 64, 64), rgba(0, 0, 0, 0.5)); */
+}

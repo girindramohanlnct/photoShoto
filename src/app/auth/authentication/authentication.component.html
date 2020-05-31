@@ -1,0 +1,61 @@
+<div class="auth">
+  <div class="sign">
+    <div class="sign-box">
+      <form [formGroup]="form" (submit)="onSubmit()">
+        <h3 *ngIf="saved">User saved</h3>
+        <h3>Sign Up</h3>
+        <input
+          formControlName="name"
+          name="name"
+          class="input"
+          type="text"
+          placeholder="Enter Name"
+        />
+        <input
+          formControlName="email"
+          name="email"
+          class="input"
+          type="email"
+          placeholder="Enter Email"
+        />
+        <input
+          formControlName="password"
+          name="password"
+          class="input"
+          type="password"
+          placeholder="Enter Password"
+        />
+        <div class="user">
+          <input formControlName="user" type="radio" value="normal" />
+          <label for="male">Normal</label><br />
+        </div>
+        <div class="user">
+          <input formControlName="user" type="radio" value="contributor" />
+          <label for="male">Contributor</label><br />
+        </div>
+        <button type="submit">Signup</button>
+      </form>
+    </div>
+  </div>
+  <div class="vl"></div>
+  <div class="login">
+    <div class="sign-box">
+      <form [formGroup]="form1" (submit)="login()">
+        <h3>Login</h3>
+        <input
+          formControlName="email"
+          class="input"
+          type="email"
+          placeholder="Enter Email"
+        />
+        <input
+          formControlName="password"
+          class="input"
+          type="password"
+          placeholder="Enter Password"
+        />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+</div>
